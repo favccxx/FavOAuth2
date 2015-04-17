@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF" packages="com.favccxx.favauth">  
+	 <Properties>
+	    <Property name="filename">E:/favsecurity-$${sd:type}.log</Property>
+	  </Properties>
+  <appenders>  
+    <Console name="Console" target="SYSTEM_OUT">  
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>  
+    </Console>  
+  </appenders>  
+  <loggers>  
+  
+<!--   	<Logger name="com.favccxx.favsecurity.web.index.IndexController" level="TRACE" additivity="false"/> -->
+<!--   	<root level="ERROR"> -->
+<!--   		<AppenderRef ref="STDOUT" /> -->
+<!-- 	</root> -->
+
+  	<Logger name="org" level="trace" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <root level="TRACE">  
+      <appender-ref ref="Console"/>  
+    </root>  
+  </loggers>  
+  
+</configuration>  

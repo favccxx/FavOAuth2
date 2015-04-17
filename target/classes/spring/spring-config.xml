@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+         
+    <context:component-scan base-package="com.favccxx.favauth"></context:component-scan>
+    
+    <!-- 引入配置文件 -->
+	<bean id="propertyConfigurer"
+    	class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    	<property name="location" value="classpath:database.properties" />
+	</bean>
+	
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass">
+			<value>${dataSource.driverClassName}</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>${dataSource.url}</value>
+		</property>
+		<property name="user">
+			<value>${dataSource.username}</value>
+		</property>
+		<property name="password">
+			<value>${dataSource.password}</value>
+		</property>
+
+		<!-- 最大连接数 -->
+		<property name="maxPoolSize">
+			<value>${dataSource.c3p0.max_size}</value>
+		</property>
+
+		<!-- 最小连接数 -->
+		<property name="minPoolSize">
+			<value>${dataSource.c3p0.min_size}</value>
+		</property>
+
+		<!-- 最大空闲时间，超时未被使用则连接被抛弃，单位毫秒 -->
+		<property name="maxIdleTime">
+			<value>${dataSource.c3p0.max_idle_time}</value>
+		</property>
+
+		<!-- 最大的PreparedStatement的数量 -->
+		<property name="maxStatements">
+			<value>${dataSource.c3p0.max_statements}</value>
+		</property>
+
+		<!-- 每隔120秒检查连接池里的空闲连接 ，单位是秒 -->
+		<property name="idleConnectionTestPeriod">
+			<value>${dataSource.c3p0.idle_test_period}</value>
+		</property>
+
+		<!-- 当连接池里面的连接用完的时候，C3P0一下获取的新的连接数 -->
+		<property name="acquireIncrement">
+			<value>${dataSource.c3p0.acquire_increment}</value>
+		</property>
+	</bean>
+	
+	<bean id="dataSourceProxy" class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+        <property name="targetDataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg ref="dataSourceProxy"/>
+    </bean>
+
+    <!--事务管理器配置-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSourceProxy"/>
+    </bean>
+    
+     <import resource="classpath:spring/spring-config-cache.xml"/>
+	
+</beans>
