@@ -539,26 +539,26 @@ public class AuthUserController {
 
 9.1 项目主页
 
-![image](https://github.com/favccxx/FavOAuth2/tree/raw/src/main/webapp/assets/images/examples/OAuth_home.png)
+![image](https://github.com/favccxx/FavOAuth2/raw/master/src/main/webapp/assets/images/examples/OAuth_home.png)
   
 
 9.2 第三方应用程序的网站管理员申请使用FavOAuth2.0登录
 
-![image](https://github.com/favccxx/FavOAuth2/tree/raw/src/main/webapp/assets/images/examples/OAuth_ApplySite.png)
+![image](https://github.com/favccxx/FavOAuth2/raw/master/src/main/webapp/assets/images/examples/OAuth_ApplySite.png)
 
 9.3 FavOAuth2.0服务器的应用管理员进行审批
 
-![image](https://github.com/favccxx/FavOAuth2/tree/raw/src/main/webapp/assets/images/examples/OAuth_ApproveSite.png)
+![image](https://github.com/favccxx/FavOAuth2/raw/master/src/main/webapp/assets/images/examples/OAuth_ApproveSite.png)
 
 9.4 模拟第三方网站的外部用户登录（为简化操作，这里使用的是第三方网站名称）
 
-![image](https://github.com/favccxx/FavOAuth2/tree/raw/src/main/webapp/assets/images/examples/OAuth_login.png)
+![image](https://github.com/favccxx/FavOAuth2/raw/master/src/main/webapp/assets/images/examples/OAuth_login.png)
 
 9.5 FavOAuth2.0服务器授权用户使用FavOAuth2.0的账号访问第三方网站
 
-![image](https://github.com/favccxx/FavOAuth2/tree/raw/src/main/webapp/assets/images/examples/OAuth_Authorization.png)
+![image](https://github.com/favccxx/FavOAuth2/raw/master/src/main/webapp/assets/images/examples/OAuth_Authorization.png)
 
 9.6 第三方用户登录成功，可以使用FavOAuth2.0的账号访问FavOAuth2.0提供的一些公共接口。
 
-![image](https://github.com/favccxx/FavOAuth2/tree/raw/src/main/webapp/assets/images/examples/OAuth_Success.png)
+![image](https://github.com/favccxx/FavOAuth2/raw/master/src/main/webapp/assets/images/examples/OAuth_Success.png)
 
