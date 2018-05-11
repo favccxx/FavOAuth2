@@ -47,10 +47,6 @@ public class AuthCodeClientController {
 			return mav;
 		}
 		
-		
-
-		
-		
 		// 使用授权码去服务端获取令牌
 		if (authVerifyService.checkAuthCode(authCode)) {
 			// 此处应采用XXX方法调用FavAccessTokenController获取返回的值
@@ -69,20 +65,8 @@ public class AuthCodeClientController {
 			paramMap.put(OAuth.OAUTH_USERNAME, userName);
 			
 			String accessToken = HttpClientUtils.doPost(url, paramMap);
-			
-//			Object resp = JSON.parse(result);    
-//	        Map map = (Map)resp;  
-//	        String accessToken = "";
-//	        if(map.containsKey("accessToken")) {
-//	        	accessToken = (String)map.get("accessToken");
-//	        }
-//			
-//			System.out.println("=----------" + accessToken);
-			
+
 			mav.addObject("accessToken", accessToken);
-			
-			//STATE 预防CSRF攻击
-			
 			mav.setViewName("redirect:http://localhost:8080/FavOAuth2/client/applyAuthUser");
 
 		}
