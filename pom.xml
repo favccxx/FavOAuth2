@@ -10,7 +10,7 @@
 	<properties>
 		<!-- <spring.version>4.3.16.RELEASE</spring.version> -->
 		<hibernate.version>5.2.11.Final</hibernate.version>
-		<hibernate.validator>5.4.1.Final</hibernate.validator>
+		<hibernate.validator>5.4.2.Final</hibernate.validator>
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mysql.version>5.1.34</mysql.version>
 		<oltu.version>1.0.2</oltu.version>
