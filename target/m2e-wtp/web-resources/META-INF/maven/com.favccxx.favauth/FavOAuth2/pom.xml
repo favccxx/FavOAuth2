@@ -8,7 +8,7 @@
 	<name>FavOAuth2 Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring.version>4.3.16.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 		<hibernate.version>5.2.11.Final</hibernate.version>
 		<hibernate.validator>5.4.1.Final</hibernate.validator>
 		<c3p0.version>0.9.5.2</c3p0.version>
