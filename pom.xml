@@ -23,7 +23,7 @@
 		<fastjson.version>1.2.38</fastjson.version>
 		<log4j.version>2.16.0</log4j.version>
 		
-		<jackson.version>2.9.9.3</jackson.version>
+		<jackson.version>2.13.4.1</jackson.version>
 		<spring.version>4.3.25.RELEASE</spring.version>
 		
 	</properties>
