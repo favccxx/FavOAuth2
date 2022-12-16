@@ -24,7 +24,7 @@
 		<log4j.version>2.16.0</log4j.version>
 		
 		<jackson.version>2.9.9.3</jackson.version>
-		<spring.version>4.3.25.RELEASE</spring.version>
+		<spring.version>5.2.20.RELEASE</spring.version>
 		
 	</properties>
 	<dependencies>
